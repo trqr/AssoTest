@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nous rejoindre</title>
+    <link rel="stylesheet" href="cfat.css">
+</head>
+<header>
+    <div class="logo">
+        <img src="./images/newLogoFlatRight.png" alt="Logo du Centre Franco-Allemand de Touraine">
+    </div>
+    <div class="subscribe-box">
+        <button class="subscribe-button"><a href="./subscribe.html">S'abonner</a></button>
+    </div>
+</header>
+<nav>
+    <div class="menu">
+        <div class="menu-item"><a href="./cfat.html">Accueil</a></div>
+        <div class="menu-item"><a href="#about">À propos</a></div>
+        <div class="menu-item"><a href="#services">Services</a></div>
+        <div class="menu-item"><a href="#contact">Contact</a></div>
+        <div class="menu-item"><a href="./subscribe.html">Subscribe</a></div>
+    </div>
+</nav>
+<main></main>
+<section class="subscription-form box">
+    <h2>Formulaire d'inscription</h2>
+    <form>
+        <div class="form-group">
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Téléphone:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="membership">Type d'adhésion:</label>
+            <select id="membership" name="membership" required>
+                <option value="standard">Standard - 50€</option>
+                <option value="premium">Premium - 100€</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="payment">Méthode de paiement:</label>
+            <select id="payment" name="payment" required>
+                <option value="credit_card">Carte de crédit</option>
+                <option value="paypal">PayPal</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button class="submit-button">S'inscrire et payer</button>
+        </div>
+    </form>
+</section>
+</main>
+
+<body>
+    <script src="./data/subscriber.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centre Franco-Allemand de Touraine</title>
+    <link rel="stylesheet" href="cfat.css">
+</head>
+<header>
+    <div class="logo">
+        <img src="./images/newLogoFlatRight.png" alt="Logo du Centre Franco-Allemand de Touraine">
+    </div>
+    <div class="login-box">
+        <form action="/login" method="post">
+            <label for="username">Nom d'utilisateur:</label>
+            <input class="input username-input" type="text" id="username" name="username" required>
+            <label for="password">Mot de passe:</label>
+            <input class="input password-input" type="password" id="password" name="password" required>
+            <button class="button login-button" type="submit">Se connecter</button>
+        </form>
+    </div>
+    <div class="subscribe-box">
+        <button class="subscribe-button"><a href="./subscribe.html">S'abonner</a></button>
+    </div>
+</header>
+<nav>
+    <div class="menu">
+        <div class="menu-item"><a href="./cfat.html">Accueil</a></div>
+        <div class="menu-item"><a href="#about">À propos</a></div>
+        <div class="menu-item"><a href="#services">Services</a></div>
+        <div class="menu-item"><a href="#contact">Contact</a></div>
+        <div class="menu-item"><a href="./subscribe.html">Subscribe</a></div>
+    </div>
+</nav>
+
+<body>
+    <section id="hero">
+        <div class="hero-content block">
+            <h1>Bienvenue au Centre Franco-Allemand de Touraine</h1>
+            <p>Promouvoir les échanges culturels et linguistiques entre la France et l'Allemagne.</p>
+            <a href="#about" class="hero-button">En savoir plus</a>
+        </div>
+    </section>
+
+    <section id="about" class="info-section">
+        <h2>À propos de nous</h2>
+        <p>Le Centre Franco-Allemand de Touraine est une organisation dédiée à la promotion des échanges culturels et
+            linguistiques entre la France et l'Allemagne. Nous offrons une variété de services pour aider les individus
+            et les organisations à mieux comprendre et apprécier les cultures française et allemande.</p>
+    </section>
+
+    <section id="services" class="info-section">
+        <h2>Nos Services</h2>
+        <ul>
+            <li>Cours de langue</li>
+            <li>Échanges culturels</li>
+            <li>Événements et ateliers</li>
+            <li>Ressources éducatives</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="info-section">
+        <h2>Contactez-nous</h2>
+        <p>Pour plus d'informations, veuillez nous contacter à l'adresse suivante :</p>
+        <p>Email: contact@cfat.fr</p>
+        <p>Téléphone: +33 1 23 45 67 89</p>
+    </section>
+    <div class="quizz-box box">
+        <h2 class="quizz-title">Quizz</h2>
+        <div id="question-container">
+            <p id="question">Cliquez sur le bouton pour générer une question.</p>
+        </div>
+        <p></p><button class="button" id="generate-question">Générer une question</button>
+    </div>
+    <div class="popup-box box">test</div>
+
+    <script type="module" src="./cfat.js"></script>
+</body>
+
+</html>
