@@ -1,13 +1,15 @@
 body {
-    background: rgb(129, 128, 128);
+    background: rgb(22, 22, 22);
     font-family: 'Verdana', cursive, sans-serif;
     max-width: 70%;
     margin: 0 auto;
+    color: #8a8787;
 }
 
 nav {
     background-color: #ba93e5;
     overflow: hidden;
+    width: 100%;
 }
 
 nav a {
