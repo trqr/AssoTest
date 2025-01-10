@@ -101,7 +101,7 @@ header img {
 }
 
 .answer-button:hover:before,
-.answer-button:focus:before {
+.answer-button:focus {
     transition: 0.5s all ease;
     left: 0;
     right: 0;
@@ -112,7 +112,7 @@ header img {
     transform: scale(0.9);
 }
 
-.wrong-answer-button {
+.wrong-answer-button:focus {
     background-color: #f44336;
     color: white;
 }
@@ -120,7 +120,6 @@ header img {
 .correct-answer-button {
     background-color: #0c860c;
     color: white;
-    z-index: 2;
 }
 
 .quizz-title {
