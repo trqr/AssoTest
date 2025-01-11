@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetGud</title>
+    <link rel="stylesheet" href="getgud.css">
+    <link rel="stylesheet" href="../../cfat.css">
+</head>
+<nav>
+    <div class="menu">
+        <div class="menu-item"><a href="./cfat.html">Accueil</a></div>
+        <div class="menu-item"><a href="#about">À propos</a></div>
+        <div class="menu-item"><a href="./games/getgud/getgud.html">Games</a></div>
+        <div class="menu-item"><a href="#contact">Contact</a></div>
+        <div class="menu-item"><a href="./subscribe.html">Subscribe</a></div>
+    </div>
+</nav>
+
+<body class="body">
+    <h1 class="titre">Welcome to Get Gud</h1>
+    <h2 class="instructions">Click on the target as fast as you can</h2>
+    <div class="loser-msg"></div>
+    <select name="difficulty" id="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+    </select>
+    <button class="start-button">Start</button>
+    <h2 class="timer"></h2>
+    <h2 class="score"></h2>
+    <h1 class="your-highest-score"></h1>
+    <div class="target-container">
+        <div class="big-circle-target dif1">
+            <div class="small-circle-target dif1 dif2">
+                <div class="target">
+                    <div class="target-center dif1 dif2 dif3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./getgud.js"></script>
+</body>
+
+</html>
