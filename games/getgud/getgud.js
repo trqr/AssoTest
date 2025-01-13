@@ -65,7 +65,7 @@ function renderGetGudPage() {
             document.querySelector(".your-highest-score").innerHTML = `Highest score: ${highestScore}`;
         }
         if (oldscore + 1 === score) {
-            showLoserMessage()
+            showLoserMessage();
         }
     });
 

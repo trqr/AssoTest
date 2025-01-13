@@ -8,14 +8,12 @@ body {
 
 nav {
     background-color: #ba93e5;
-    overflow: hidden;
+    height: 30px;
+    display: flex;
     width: 100%;
 }
 
 nav a {
-    /* float: left; */
-    /* display: block; */
-    /* color: white; */
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -25,6 +23,8 @@ nav a {
     background-color: #ddd;
     color: black;
 } */
+
+
 
 header img {
     max-width: 500px;
@@ -350,6 +350,48 @@ button span {
     color: #03045e;
     font-size: 18px;
     transition: all 0.3s ease-in;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 3;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #ba93e5;
+    width: 150px;
+    height: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-content-games:hover {
+    background-color: #8a8787;
+    z-index: 3;
+}
+
+.dropdown-content a {
+    color: #36095f;
+    background-color: #ba93e5;
+    padding: 12px 16px;
+    height: 8px;
+    text-decoration: none;
+    display: block;
+    border-top: 1px solid #000000;
+    justify-content: center;
+    z-index: 3;
+}
+
+/* .dropdown-content a:hover {
+    background-color: #f1f1f1;
+} */
+
+.dropdown:hover .dropdown-content {
+    display: contents;
 }
 
 .block {
