@@ -34,6 +34,7 @@ export function renderHeaderNav() {
                 </div>
                 <div class="menu-item"><a href="#contact">Contact</a></div>
                 <div class="menu-item"><a href="/subscribe.html">Subscribe</a></div>
+                <div class="menu-item"><a href="/accounts.html">Accounts</a></div>
             </div>
         </nav>`;
 }

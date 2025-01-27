@@ -1,3 +1,5 @@
+import { renderHeaderNav } from "../renderHeaderNav.js";
+
 export let accounts;
 accounts = JSON.parse(localStorage.getItem('accounts')) || [];
 
@@ -57,3 +59,16 @@ export function logout() {
     <button class="button create-account-button"><span><a href="/register.html">Create an account</a></span></button>`;
     });
 }
+
+renderHeaderNav();
+
+accounts.forEach(account => {
+    document.querySelector('.accounts-list').innerHTML += `
+    <div class="box-info account">
+    <ul>
+    <li>${account.username}</li>
+    <li>${account.password}</li>
+    <li>${account.email}</li>
+    </ul>
+    </div>`
+});

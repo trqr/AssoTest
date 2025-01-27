@@ -412,7 +412,7 @@ button span {
 
 .login-box {
     width: 300px;
-    position: fixed;
+    position: absolute;
     font-size: smaller;
     right: 15%;
     top: 30px;
