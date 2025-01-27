@@ -12,27 +12,28 @@ export function renderHeaderNav() {
                         <label for="password">Mot de passe:</label>
                         <input class="input password-input" type="password" id="password" name="password" required>
                     </div>
-                    <button class="button login-button" type="submit"><span>Se connecter</span></button>
+                    <button class="button login-button" type="submit"><span>Sign in</span></button>
+                    <button class="button register-button" type="submit"><span><a href="/register.html">Create an account</a></span></button>
                 </form>
             </div>
             <div class="subscribe-box">
-                <button class="subscribe-button button"><a href="./subscribe.html"><span>S'abonner</span></a></button>
+                <button class="subscribe-button button"><a href="/subscribe.html"><span>S'abonner</span></a></button>
             </div>
         </header>
         <nav>
             <div class="menu">
-                <div class="menu-item"><a href="./cfat.html">Accueil</a></div>
+                <div class="menu-item"><a href="/cfat.html">Accueil</a></div>
                 <div class="menu-item"><a href="#about">À propos</a></div>
                 <div class="menu-item dropdown">
-                    <a href="./games/getgud/getgud.html" class="dropbtn">Games</a>
+                    <a href="/games/getgud/getgud.html" class="dropbtn">Games</a>
                     <div class="dropdown-content">
-                        <a class="dropdown-content-games" href="./games/getgud/getgud.html">Get Gud</a>
-                        <a class="dropdown-content-games" href="./games/quizz.html">Quizz</a>
-                        <a class="dropdown-content-games" href=" ./games/rpg/rpg.html">RPG</a>
+                        <a class="dropdown-content-games" href="/games/getgud/getgud.html">Get Gud</a>
+                        <a class="dropdown-content-games" href="/games/quizz.html">Quizz</a>
+                        <a class="dropdown-content-games" href="/games/rpg/rpg.html">RPG</a>
                     </div>
                 </div>
                 <div class="menu-item"><a href="#contact">Contact</a></div>
-                <div class="menu-item"><a href="./subscribe.html">Subscribe</a></div>
+                <div class="menu-item"><a href="/subscribe.html">Subscribe</a></div>
             </div>
         </nav>`;
 }

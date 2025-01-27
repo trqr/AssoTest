@@ -1,7 +1,11 @@
+import { renderHeaderNav } from "../renderHeaderNav.js";
+
+renderHeaderNav();
+
 let members;
 members = JSON.parse(localStorage.getItem('members')) || [];
 
-function saveToStorage() {
+function SubsSaveToStorage() {
     localStorage.setItem('members', JSON.stringify(members));
 }
 
@@ -17,7 +21,7 @@ document.querySelector('.submit-button').addEventListener('click', (event) => {
 
     members.push(member);
     console.log(members);
-    saveToStorage();
+    SubsSaveToStorage();
 
     document.querySelector('.subscription-form').remove();
     document.querySelector('body').innerHTML +=
