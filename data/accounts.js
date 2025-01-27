@@ -30,9 +30,30 @@ export function login() {
         const password = document.getElementById('password').value;
         const account = accounts.find(account => account.username === username && account.password === password);
         if (account) {
+            document.querySelector('.login-box').innerHTML = `<div class="box logged-in">Logged in as ${account.username}</div>
+            <button class="button logout-button"><span><a>Logout</a></span></button>`;
             console.log('Login successful');
         } else {
             console.log('Login failed');
+            alert('Login failed');
         }
     });
 };
+
+export function logout() {
+    const logoutButton = document.querySelector('.logout-button');
+    logoutButton.addEventListener('click', () => {
+        document.querySelector('.login-box').innerHTML = `<div class="inputbox">
+        <input class="input username-input" required="required" type="text" id="username" name="username" required>
+        <span>Username</span>
+        <i></i>
+    </div>
+    <div class="inputbox">
+        <input class="input password-input" type="password" id="password" name="password" required>
+        <span>Password</span>
+        <i></i>
+    </div>
+    <button class="button login-button"><span><a>Sign in</a></span></button>
+    <button class="button create-account-button"><span><a href="/register.html">Create an account</a></span></button>`;
+    });
+}

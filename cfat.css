@@ -412,7 +412,7 @@ button span {
 
 .login-box {
     width: 300px;
-    position: absolute;
+    position: fixed;
     font-size: smaller;
     right: 15%;
     top: 30px;
@@ -426,8 +426,9 @@ button span {
 }
 
 .inputbox input {
+    position: relative;
     width: 100%;
-    padding: 0px 0px px;
+    padding: 20px 10px 0px;
     background: transparent;
     outline: none;
     box-shadow: none;
@@ -441,7 +442,7 @@ button span {
 
 .inputbox span {
     left: 0;
-    padding: 0px 10px 0px;
+    padding: 0px 0x 0px;
     font-size: 1em;
     color: #8f8f8f;
     letter-spacing: 00.05em;
@@ -473,6 +474,4 @@ button span {
 .inputbox input:valid~i,
 .inputbox input:focus~i {
     height: 20px;
-    color: #f7ba2b;
-    z-index: 11;
 }
