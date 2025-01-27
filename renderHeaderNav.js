@@ -4,16 +4,18 @@ export function renderHeaderNav() {
             <div class="fakelogo">LOGO</div>
             <div class="login-box">
                 <form action="/login" method="post">
-                    <div class="inputGroup">
-                        <label class="label" for="username">Nom d'utilisateur:</label>
-                        <input class="input username-input" type="text" id="username" name="username" required>
+                    <div class="inputbox">
+                        <input class="input username-input" required="required" type="text" id="username" name="username" required>
+                        <span>Username</span>
+                        <i></i>
                     </div>
-                    <div class="inputGroup">
-                        <label for="password">Mot de passe:</label>
-                        <input class="input password-input" type="password" id="password" name="password" required>
+                    <div class="inputbox">
+                        <input class="input password-input" type="password"  id="password" name="password" required>
+                        <span>Password</span>
+                        <i></i>
                     </div>
-                    <button class="button login-button" type="submit"><span>Sign in</span></button>
-                    <button class="button register-button" type="submit"><span><a href="/register.html">Create an account</a></span></button>
+                    <button class="button login-button"><span><a href="">Sign in</a></span></button>
+                    <button class="button create-account-button"><span><a href="/register.html">Create an account</a></span></button>
                 </form>
             </div>
             <div class="subscribe-box">

@@ -1,7 +1,9 @@
-import { accounts } from "./data/accounts.js";
+import { accounts, addToAccounts } from "./data/accounts.js";
 import { renderHeaderNav } from "./renderHeaderNav.js";
-import { addToAccounts } from "./data/accounts.js";
 
 renderHeaderNav();
 
-addToAccounts();
+const registerButton = document.querySelector('.register-button');
+registerButton.addEventListener('click', () => {
+    addToAccounts();
+});

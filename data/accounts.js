@@ -6,16 +6,21 @@ export function AccsSaveToStorage() {
 }
 
 export function addToAccounts() {
-    const registerButton = document.querySelector('.register-button');
-    registerButton.addEventListener('click', () => {
+    const email = document.getElementById('email').value;
+    const matchingAccount = accounts.find(account => account.email === email);
+    if (matchingAccount) {
+        console.log('Email already in use');
+        return;
+    } else {
         accounts.push({
             username: document.getElementById('accUsername').value,
             password: document.getElementById('accPassword').value,
             email: document.getElementById('email').value
-        });
+        })
         console.log(accounts);
         AccsSaveToStorage();
-    });
+    };
+
 };
 
 export function login() {
