@@ -13,6 +13,8 @@ export function addToAccounts() {
     if (matchingAccount) {
         console.log('Email already in use');
         return;
+    } else if (document.getElementById('accUsername').value === "" || document.getElementById('accPassword').value === "" || document.getElementById('email').value === "") {
+        console.log('Please fill all fields');
     } else {
         accounts.push({
             username: document.getElementById('accUsername').value,
@@ -24,7 +26,7 @@ export function addToAccounts() {
     };
 };
 
-function removeToAccounts(username) {
+export function removeToAccounts(username) {
     const newAccounts = [];
     accounts.forEach(account => {
         if (account.username !== username) {
@@ -72,10 +74,7 @@ export function logout() {
     });
 }
 
-renderHeaderNav();
-renderAccountsPage();
-
-function renderAccountsPage() {
+export function renderAccountsPage() {
     let accountsHTML = "";
     accounts.forEach(account => {
         accountsHTML += `
@@ -92,12 +91,3 @@ function renderAccountsPage() {
     document.querySelector('.accounts-list').innerHTML = accountsHTML;
 }
 
-const deleteAccountButtons = document.querySelectorAll('.delete-account-button');
-deleteAccountButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const username = button.dataset.username;
-        removeToAccounts(username);
-        console.log(accounts);
-        renderAccountsPage()
-    });
-});
