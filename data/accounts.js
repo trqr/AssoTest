@@ -22,8 +22,20 @@ export function addToAccounts() {
         console.log(accounts);
         AccsSaveToStorage();
     };
-
 };
+
+function removeToAccounts(username) {
+    const newAccounts = [];
+    accounts.forEach(account => {
+        if (account.username !== username) {
+            newAccounts.push(account);
+        } else {
+            console.log(account.username + ' removed');
+        }
+    });
+    accounts = newAccounts;
+    AccsSaveToStorage();
+}
 
 export function login() {
     const loginButton = document.querySelector('.login-button');
@@ -61,14 +73,31 @@ export function logout() {
 }
 
 renderHeaderNav();
+renderAccountsPage();
 
-accounts.forEach(account => {
-    document.querySelector('.accounts-list').innerHTML += `
+function renderAccountsPage() {
+    let accountsHTML = "";
+    accounts.forEach(account => {
+        accountsHTML += `
     <div class="box-info account">
     <ul>
     <li>${account.username}</li>
     <li>${account.password}</li>
     <li>${account.email}</li>
     </ul>
-    </div>`
+    <button class="button delete-account-button" data-username="${account.username}"><span><a>Delete account</a></span></button>
+    </div>
+    <p></p>`
+    });
+    document.querySelector('.accounts-list').innerHTML = accountsHTML;
+}
+
+const deleteAccountButtons = document.querySelectorAll('.delete-account-button');
+deleteAccountButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const username = button.dataset.username;
+        removeToAccounts(username);
+        console.log(accounts);
+        renderAccountsPage()
+    });
 });
