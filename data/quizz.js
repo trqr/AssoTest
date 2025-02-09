@@ -65,6 +65,8 @@ export function generateQuizzQuestion() {
             correctButton.innerText = selectedQuestion.answer;
             correctButton.addEventListener('click', () => {
                 correctButton.classList.add('correct-answer-button');
+                const audio = new Audio('./audio/enter.mp3');
+                audio.play();
             });
             answerContainer.appendChild(wrongButton);
             answerContainer.appendChild(correctButton);
